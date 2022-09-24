@@ -18,7 +18,7 @@ export default function TodoItem({
         }}
         className={`${
           isFinished && "line-through	text-neutral-400 font-medium"
-        } cursor-pointer self-center select-none py-4 grow`}
+        } cursor-pointer self-center select-none py-4 grow capitalize`}
       >
         {body}
       </p>
