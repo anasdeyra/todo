@@ -12,9 +12,9 @@ type Todo = {
 function App() {
   const todos = useSelector((state: RootState) => state.todo);
   return (
-    <div className="container max-w-lg mt-32 mx-auto">
+    <div className="container max-w-lg mt-16 mx-auto">
       <div className="flex flex-col gap-8">
-        <h1 className="font-extrabold self-center w-min text-6xl bg-clip-text text-transparent bg-gradient-to-r from-[#8c366c] to-[#6e64e7] ">
+        <h1 className="font-extrabold self-center w-min text-6xl bg-clip-text text-transparent bg-gradient-to-r from-[#0575E6] to-[#021B79] ">
           Todododo
         </h1>
         <div>

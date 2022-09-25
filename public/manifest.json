@@ -1,0 +1,25 @@
+{
+  "short_name": "Todo",
+  "name": "Todododo",
+  "icons": [
+    {
+      "src": "/vite.svg",
+      "type": "image/svg+xml",
+      "sizes": "512x512"
+    }
+  ],
+  "id": "/",
+  "start_url": "/",
+  "background_color": "#6366F1",
+  "display": "standalone",
+  "scope": "/",
+  "theme_color": "#6366F1",
+  "description": "Billion dollar todo app",
+  "screenshots": [
+    {
+      "src": "/vite.svg",
+      "type": "image/svg+xml",
+      "sizes": "540x720"
+    }
+  ]
+}

@@ -1,8 +1,10 @@
 import { configureStore } from "@reduxjs/toolkit";
 import todoSlice from "./components/TodoSlice";
+import { createStateSyncMiddleware } from "redux-state-sync";
 
 export const store = configureStore({
   reducer: { todo: todoSlice },
+  middleware: [createStateSyncMiddleware()],
 });
 
 const unsubscribe = store.subscribe(() => {

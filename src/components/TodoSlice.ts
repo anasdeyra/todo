@@ -12,7 +12,7 @@ export const todoSlice = createSlice({
   reducers: {
     add: (state, action: PayloadAction<string>) => {
       if (action.payload.length < 1) return;
-      state.push({ body: action.payload, isFinished: false });
+      state.unshift({ body: action.payload, isFinished: false });
     },
     remove: (state, action: PayloadAction<number>) => {
       state.splice(action.payload, 1);
@@ -29,10 +29,16 @@ export const todoSlice = createSlice({
           isFinished: true,
         });
     },
+    swapPositions: (
+      state,
+      { payload: { from, to } }: PayloadAction<{ from: number; to: number }>
+    ) => {
+      state.splice(to, 0, state.splice(from, 1)[0]);
+    },
   },
 });
 
 // Action creators are generated for each case reducer function
-export const { add, remove, toggleFinished } = todoSlice.actions;
+export const { add, remove, toggleFinished, swapPositions } = todoSlice.actions;
 
 export default todoSlice.reducer;
